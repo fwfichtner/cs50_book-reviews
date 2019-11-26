@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  <h1>{% block title %}Search Results{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+
+<ul>
+    {% for book in books %}
+    <li>{{book['author']}} - {{book['title']}} - <a href="/book/{{book['isbn']}}">more</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

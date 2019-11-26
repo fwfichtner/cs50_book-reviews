@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+  <h1>{% block title %}Search{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+
+<form action="/search" method="GET">
+    <input name="book" placeholder="Search for ISBN, title or author" type="text" required>
+    <button type="submit">Search</button>
+</form>
+{% endblock %}
